@@ -2,6 +2,9 @@
 
 A modern, real-time currency converter application built with React, Vite, HTML, CSS, and JavaScript. This project uses the ExchangeRate-API to fetch live exchange rates and perform currency conversions.
 
+## Live Link
+https://691a81759bc0598037ae9bd0--spontaneous-banoffee-b12579.netlify.app/
+
 ## Features
 
 - **Real-Time Exchange Rates**: Fetches live currency conversion rates from ExchangeRate-API
