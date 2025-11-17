@@ -1,0 +1,247 @@
+/* Currency Converter Styles */
+.currency-converter {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.converter-container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 50px 60px;
+  max-width: 1200px;
+  width: 95%;
+  animation: slideIn 0.5s ease-out;
+}
+
+
+.converter-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.converter-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+  font-size: 1.3rem;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Styles */
+.converter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #555;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.amount-input,
+.currency-select {
+  padding: 18px 24px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.amount-input:focus,
+.currency-select:focus {
+  outline: none;
+  border-color: #667eea;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.amount-input {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Currency Group with Swap Button */
+.currency-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 25px;
+}
+
+.swap-button {
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 70px;
+  height: 62px;
+  margin-bottom: 0;
+}
+
+.swap-button:hover:not(:disabled) {
+  transform: rotate(180deg) scale(1.1);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.swap-button:active:not(:disabled) {
+  transform: rotate(180deg) scale(0.95);
+}
+
+.swap-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Result Container */
+.result-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 45px 50px;
+  border-radius: 15px;
+  margin-top: 10px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+
+
+
+.result-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.result-amount {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.result-amount.converted {
+  color: #ffd700;
+  font-size: 3.2rem;
+}
+
+.result-currency {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+}
+
+.result-equals {
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.exchange-rate-info {
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 25px;
+}
+
+/* Last Updated */
+.last-updated {
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  margin-top: 25px;
+  font-style: italic;
+}
+
+/* API Attribution */
+.api-attribution {
+  margin-top: 25px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.api-attribution p {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.api-attribution a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.api-attribution a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+
+
+
+.currency-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Number input without spinner */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
